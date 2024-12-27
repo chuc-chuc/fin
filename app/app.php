@@ -1,3 +1,5 @@
+<script src="js/jquery.min.js"></script>
+
 <link href="css/datatables.min.css" rel="stylesheet">
 <script src="js/datatables.min.js"></script>
 
