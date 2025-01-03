@@ -1,7 +1,7 @@
 <?php
 class App
 {
-    private function acceso($acceso)
+    public function acceso($acceso)
     {
         $db = db();
         //consulta
@@ -48,62 +48,96 @@ class App
                                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                                     clip-rule="evenodd"></path>
                             </svg>
-                            <svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <a href="./" class="flex mr-14">
-                            <img src="images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-                            <span
-                                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                        <a class="flex mr-14">
+                            <svg id="Layer_2" class=" w-7 h-7 mt-1 " height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-name="Layer 2">
+                                <linearGradient id="linear-gradient" gradientUnits="userSpaceOnUse" x1="43.93" x2="468.07" y1="43.93" y2="468.07">
+                                    <stop offset="0" stop-color="#ff386a" />
+                                    <stop offset="1" stop-color="#ab2343" />
+                                </linearGradient>
+                                <g id="Icon">
+                                    <g id="F">
+                                        <rect id="Background" fill="url(#linear-gradient)" height="512" rx="150" width="512" />
+                                        <path id="F-2" d="m203.51 431.05h-70.07v-350.1h245.12v70.07h-175.05v70.07h104.98v70.07h-104.98z" fill="#fff" data-name="F" />
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white ml-2">INCOOP</span>
                         </a>
                     </div>
                     <div class="flex items-center">
+
+                        <p class="text-sm font-medium text-gray-900 dark:text-white" role="none">
+                            <?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellido']; ?>
+                        </p>
                         <div class="flex items-center ml-3">
                             <div>
                                 <button type="button"
-                                    class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                                    class="flex text-sm bg-white rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                                     id="user-menu-button-2" aria-expanded="false" data-dropdown-toggle="dropdown-2">
                                     <span class="sr-only">Open user menu</span>
-                                    <img class="w-8 h-8 rounded-full" src="
-                                images/users/neil-sims.png"
-                                        alt="user photo" />
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2200 2200"
+                                        style="enable-background:new 0 0 2200 2200;" xml:space="preserve" class="w-10 h-10">
+                                        <g id="Objects">
+                                            <g>
+                                                <radialGradient id="SVGID_1_" cx="742.4818" cy="737.5518" r="1257.2716"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" style="stop-color:#63DFFC" />
+                                                    <stop offset="1" style="stop-color:#3F7CD1" />
+                                                </radialGradient>
+                                                <path style="fill:url(#SVGID_1_);"
+                                                    d="M1903,1100c0,215.52-84.91,411.21-223.1,555.44C1533.74,1808.01,1327.96,1903,1100,1903
+			s-433.74-94.99-579.9-247.56C381.91,1511.21,297,1315.52,297,1100c0-443.48,359.52-803,803-803S1903,656.52,1903,1100z" />
+
+                                                <radialGradient id="SVGID_00000104698309287865493900000001749800286949306755_"
+                                                    cx="1024.0569" cy="699.494" r="480.5576" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" style="stop-color:#FFFFFF" />
+                                                    <stop offset="0.9989" style="stop-color:#D1D1D1" />
+                                                </radialGradient>
+                                                <circle
+                                                    style="fill:url(#SVGID_00000104698309287865493900000001749800286949306755_);"
+                                                    cx="1100" cy="815.047" r="328.046" />
+
+                                                <radialGradient id="SVGID_00000123438996930488595010000002696201408001185471_"
+                                                    cx="965.7524" cy="1455.6234" r="674.9591" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" style="stop-color:#FFFFFF" />
+                                                    <stop offset="0.9989" style="stop-color:#D1D1D1" />
+                                                </radialGradient>
+                                                <path
+                                                    style="fill:url(#SVGID_00000123438996930488595010000002696201408001185471_);"
+                                                    d="M1679.9,1655.44
+			C1533.74,1808.01,1327.96,1903,1100,1903s-433.74-94.99-579.9-247.56c82.54-240.93,311-414.12,579.9-414.12
+			S1597.36,1414.51,1679.9,1655.44z" />
+                                            </g>
+                                        </g>
+                                    </svg>
                                 </button>
                             </div>
 
                             <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                                 id="dropdown-2">
                                 <div class="py-3 px-4" role="none">
-                                    <p class="text-sm text-gray-900 dark:text-white" role="none">
-                                        Neil Sims
-                                    </p>
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                        neil.sims@flowbite.com
+                                        Usuario: miguechuc
                                     </p>
                                 </div>
                                 <ul class="py-1" role="none">
                                     <li>
                                         <a href="#"
                                             class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            role="menuitem">Dashboard</a>
+                                            role="menuitem">Cambio de contraseña</a>
                                     </li>
                                     <li>
                                         <a href="#"
                                             class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            role="menuitem">Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            role="menuitem">Earnings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            role="menuitem">Sign out</a>
+                                            role="menuitem">Cerrar Sesion</a>
                                     </li>
                                 </ul>
                             </div>
@@ -115,7 +149,7 @@ class App
     <?php
     }
 
-    public function aside()
+    public function asideInicio()
     {
         // Aside content
     ?>
@@ -124,13 +158,12 @@ class App
             <div
                 class="flex relative flex-col flex-1 pt-0 min-h-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
                 <div class="flex overflow-y-auto flex-col flex-1 pt-5 pb-4 overflow-hidden">
-                    <div
-                        class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                    <div class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
                         <ul class="pb-2 space-y-2">
                             <li>
                                 <a href="vista.php?ruta=menu"
                                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
-                                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                    <svg class="flex-shrink-0 w-6 h-6 text-red-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                                         fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
@@ -138,10 +171,15 @@ class App
                                     </svg>
                                     <span
                                         class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
-                                        sidebar-toggle-item>Inicio</span>
+                                        sidebar-toggle-item>INICIO</span>
                                 </a>
                             </li>
-
+                        <?php
+                    }
+                    public function asideFinal()
+                    {
+                        // Aside content
+                        ?>
                         </ul>
                         <div class="pt-2 space-y-2">
                             <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
@@ -158,8 +196,7 @@ class App
                         </div>
                     </div>
                 </div>
-                <div class="hidden relative bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex"
-                    sidebar-bottom-menu>
+                <div class="hidden relative bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex" sidebar-bottom-menu>
                     <a href="../../users/settings/" data-tooltip-target="tooltip-settings"
                         class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -281,24 +318,26 @@ class App
         </script>
 
     <?php
-    }
-    public function caja()
-    {
+                    }
+                    public function menuCaja()
+                    {
     ?>
         <li>
             <button type="button"
                 class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
                 aria-controls="dropdown-ecommerce" data-collapse-toggle="dropdown-ecommerce">
-                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                    <path
+                        d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
                     <path fill-rule="evenodd"
-                        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                        clip-rule="evenodd"></path>
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z"
+                        clip-rule="evenodd" />
                 </svg>
-                <span
-                    class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+
+                <span class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
                     :class="{ 'opacity-0': isSidebarCollapsed, 'opacity-100': !isSidebarCollapsed }"
-                    sidebar-toggle-item>caja</span>
+                    sidebar-toggle-item>Caja</span>
                 <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -309,21 +348,220 @@ class App
             <ul id="dropdown-ecommerce" class="hidden py-2 space-y-2">
                 <li>
                     <a href="./e-commerce/products.html"
-                        class="sidebar-text flex items-center p-2 pl-11 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        class="sidebar-text flex items-center p-2 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
                         sidebar-toggle-item><span
-                            class="pl-10 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
-                            sidebar-toggle-item>Envio</span>
+                            class=" transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Pago de Préstamo Efectivo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class=" transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Pago de Préstamo Transferencia</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class="transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Deposito</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class="transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Retiro</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <?php
+                    }
+                    public function menuCajaGeneral()
+                    {
+    ?>
+        <li>
+            <button type="button"
+                class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-CajaGeneral" data-collapse-toggle="dropdown-CajaGeneral">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                    <path fill-rule="evenodd"
+                        d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm10.5 1.875a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25ZM12 10.5a.75.75 0 0 1 .75.75v.028a9.727 9.727 0 0 1 1.687.28.75.75 0 1 1-.374 1.452 8.207 8.207 0 0 0-1.313-.226v1.68l.969.332c.67.23 1.281.85 1.281 1.704 0 .158-.007.314-.02.468-.083.931-.83 1.582-1.669 1.695a9.776 9.776 0 0 1-.561.059v.028a.75.75 0 0 1-1.5 0v-.029a9.724 9.724 0 0 1-1.687-.278.75.75 0 0 1 .374-1.453c.425.11.864.186 1.313.226v-1.68l-.968-.332C9.612 14.974 9 14.354 9 13.5c0-.158.007-.314.02-.468.083-.931.831-1.582 1.67-1.694.185-.025.372-.045.56-.06v-.028a.75.75 0 0 1 .75-.75Zm-1.11 2.324c.119-.016.239-.03.36-.04v1.166l-.482-.165c-.208-.072-.268-.211-.268-.285 0-.113.005-.225.015-.336.013-.146.14-.309.374-.34Zm1.86 4.392V16.05l.482.165c.208.072.268.211.268.285 0 .113-.005.225-.015.336-.012.146-.14.309-.374.34-.12.016-.24.03-.361.04Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                    :class="{ 'opacity-0': isSidebarCollapsed, 'opacity-100': !isSidebarCollapsed }" sidebar-toggle-item>Caja
+                    General</span>
+
+                <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <ul id="dropdown-CajaGeneral" class="hidden py-2 space-y-2">
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class="transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Efetivo enviado a cajero</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class="transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Products</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <?php
+                    }
+                    public function menuCreditos()
+                    {
+    ?>
+        <li>
+            <button type="button"
+                class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-Creditos" data-collapse-toggle="dropdown-Creditos">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                    <path fill-rule="evenodd"
+                        d="M19.5 21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3h-5.379a.75.75 0 0 1-.53-.22L11.47 3.66A2.25 2.25 0 0 0 9.879 3H4.5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h15ZM9 12.75a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5H9Z"
+                        clip-rule="evenodd" />
+                </svg>
+
+                <span class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                    :class="{ 'opacity-0': isSidebarCollapsed, 'opacity-100': !isSidebarCollapsed }"
+                    sidebar-toggle-item>Creditos</span>
+                <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <ul id="dropdown-Creditos" class="hidden py-2 space-y-2">
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class=" transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Carga Archivo</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <?php
+                    }
+
+                    public function menuClientes()
+                    {
+    ?>
+        <li>
+            <button type="button"
+                class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-Clientes" data-collapse-toggle="dropdown-Clientes">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                    <path fill-rule="evenodd"
+                        d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z"
+                        clip-rule="evenodd" />
+                    <path
+                        d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                </svg>
+
+                <span class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                    :class="{ 'opacity-0': isSidebarCollapsed, 'opacity-100': !isSidebarCollapsed }"
+                    sidebar-toggle-item>Clientes</span>
+                <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <ul id="dropdown-Clientes" class="hidden py-2 space-y-2">
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class=" transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Carga Archivo</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <?php
+                    }
+
+                    public function menuUsuarios()
+                    {
+    ?>
+        <li>
+            <button type="button"
+                class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-Usuarios" data-collapse-toggle="dropdown-Usuarios">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                    <path
+                        d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
+                </svg>
+
+                <span class="sidebar-text ml-3 transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                    :class="{ 'opacity-0': isSidebarCollapsed, 'opacity-100': !isSidebarCollapsed }"
+                    sidebar-toggle-item>Usuarios</span>
+                <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <ul id="dropdown-Usuarios" class="hidden py-2 space-y-2">
+                <li>
+                    <a href="./e-commerce/products.html"
+                        class="sidebar-text flex items-center p-2 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                        sidebar-toggle-item><span
+                            class=" transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
+                            sidebar-toggle-item>Mantenimiento</span>
                     </a>
                 </li>
             </ul>
         </li>
 <?php
-    }
+                    }
 
-    public function menus()
-    {
-        if ($this->acceso('caja')) {
-            $this->caja(); //mostrar menu caja
-        }
-    }
-}
+                    public function menus()
+                    {
+                        $this->asideInicio();
+                        if ($this->acceso('caja')) {
+                            $this->menuCaja(); //mostrar menu caja
+                        }
+                        if ($this->acceso('caja')) {
+                            $this->menuCajaGeneral(); //mostrar menu caja
+                        }
+                        if ($this->acceso('caja')) {
+                            $this->menuCreditos(); //mostrar menu caja
+                        }
+                        if ($this->acceso('caja')) {
+                            $this->menuClientes(); //mostrar menu caja
+                        }
+                        if ($this->acceso('caja')) {
+                            $this->menuUsuarios(); //mostrar menu caja
+                        }
+                        $this->asideFinal();
+                    }
+                }

@@ -13,3 +13,5 @@
 
 <script src="js/sweetalert2.all.min.js"></script>
 <link href="css/sweetalert2.min.css" rel="stylesheet">
+
+<link href="css/css.css" rel="stylesheet">
