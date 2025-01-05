@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINCOOP</title>
+    <link rel="shortcut icon" href="images/icono.png" />
     <?php
     include_once 'app/app.php';
     include_once 'view/app.php';

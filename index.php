@@ -31,7 +31,6 @@ if (ini_get("session.use_cookies")) {
 }
 
 // Finalmente, destruir la sesión.
-session_destroy();
 if (isset($_SESSION['usuario_id'])) {
 ?>
 
