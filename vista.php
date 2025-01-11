@@ -12,6 +12,8 @@ $ruta = $_GET['ruta'];
 switch ($ruta) {
     case 'menu':
     case 'caja_index':
+	case 'caja_bobeda':
+        case 'cambio_contra':
         // Verificamos si el método existe en el objeto controller antes de llamarlo.
         if (method_exists($controller, $ruta)) {
             $controller->$ruta();

@@ -19,5 +19,10 @@ class ServicioController
             echo "Error: el método solicitado no existe.";
         }
     }
+    public function validarSesion()
+    {
+        $main = new servicio( $this->db );
+        return $main->validarSesion();
+    }
 
 }

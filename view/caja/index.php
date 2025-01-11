@@ -15,7 +15,7 @@ include_once 'view/header.php';
 			<div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 				<h2 class="text-2xl font-bold leading-tight text-gray-800">Estado de la Caja</h2>
 				<?php
-				$estado_apertura = 0;
+				$estado_apertura = 1;
 				if ( $estado_apertura == 0 ) {
 					?>
 					<p class="text-gray-700 font-medium">Estado: <span class="text-red-500">Cerrada</span></p>
@@ -25,7 +25,7 @@ include_once 'view/header.php';
 					<?php
 				} else {
 					?>
-					<p class="text-gray-700 font-medium">Estado: <span class="text-red-500">Abierta</span></p>
+					<p class="text-gray-700 font-medium">Estado: <span class="text-green-500">Abierta</span></p>
 					<button id="btnCierre" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">
 						Cierre
 					</button>
@@ -77,7 +77,7 @@ include_once 'view/header.php';
 		</div>
 	</div>
 </main>
-<script src="view/caja/caja.js"></script>
+<script src="view/caja/index.js"></script>
 
 <?php
 include_once 'view/footer.php';

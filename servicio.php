@@ -4,8 +4,19 @@ ini_set('display_errors', '1');
 require_once "app/database.php";
 require_once "controller/c_servicio.php";
 $db = db();
+if ( session_status() == PHP_SESSION_NONE ) {
+	session_start();
+}
+
 $controller = new ServicioController($db);
 if (isset($_POST['metodo'])) {
     $controller->servicios($_POST['metodo']);
+    exit;
+} 
+else {
+	echo json_encode( [ 
+		'status' => 'sinMetodo',
+		'message' => 'Sin Metodo Enviado'
+	] );
     exit;
 }

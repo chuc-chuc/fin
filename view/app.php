@@ -130,14 +130,14 @@ class App {
 								</div>
 								<ul class="py-1" role="none">
 									<li>
-										<a href="#"
+										<a href="vista.php?ruta=cambio_contra"
 											class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
 											role="menuitem">Cambio de contraseña</a>
 									</li>
 									<li>
-										<a href="#"
-											class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-											role="menuitem">Cerrar Sesion</a>
+										<button onclick="cerrarSesion()"
+											class="block py-2 px-4 w-full text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+											role="menuitem">Cerrar Sesion</button>
 									</li>
 								</ul>
 							</div>
@@ -146,6 +146,33 @@ class App {
 				</div>
 			</div>
 		</nav>
+		<script>
+			function cerrarSesion() {
+				var formData = $(this).serialize(); // Prepara los datos del formulario para enviar
+            	formData += '&metodo=cerrarSesion'; // Agregar dato adicional
+				$.ajax({
+					url: 'servicio.php', // Ajusta esta ruta según tu estructura
+					type: 'POST',
+					dataType: 'json',
+					data: formData, // Datos para enviar al script PHP
+					success: function (response) {
+						if (response.status === 'success') {
+							// Mostrar mensaje de éxito
+							//alert(response.message);
+							// Redirigir a la página de login
+							window.location.href = 'index.php';
+						} else {
+							// Mostrar mensaje de error
+							alert('Error: ' + response.message);
+						}
+					},
+					error: function (xhr, status, error) {
+						// Manejar errores de la petición Ajax
+						alert('Error en la petición: ' + error);
+					}
+				});
+			}
+		</script>
 		<?php
 	}
 
@@ -313,6 +340,58 @@ class App {
 					updateSidebarClasses();
 				});
 			});
+			// Función para manejar el estado de los dropdowns
+			document.addEventListener('DOMContentLoaded', function () {
+				// Obtener todos los botones de dropdown
+				const dropdownButtons = document.querySelectorAll('[data-collapse-toggle]');
+
+				// Para cada botón de dropdown
+				dropdownButtons.forEach(button => {
+					const dropdownId = button.getAttribute('data-collapse-toggle');
+					const dropdownContent = document.getElementById(dropdownId);
+
+					// Verificar el estado guardado en localStorage
+					const isExpanded = localStorage.getItem(`dropdown_${dropdownId}`) === 'true';
+
+					// Aplicar el estado guardado
+					if (isExpanded) {
+						dropdownContent.classList.remove('hidden');
+						// Rotar solo el icono de la flecha
+						const arrow = button.querySelector('svg:last-child');
+						if (arrow) {
+							arrow.style.transform = 'rotate(180deg)';
+							arrow.style.transition = 'transform 0.3s ease';
+						}
+					}
+
+					// Agregar evento click
+					button.addEventListener('click', function () {
+						// Toggle de la clase hidden
+						dropdownContent.classList.toggle('hidden');
+
+						// Guardar el estado actual en localStorage
+						const isNowExpanded = !dropdownContent.classList.contains('hidden');
+						localStorage.setItem(`dropdown_${dropdownId}`, isNowExpanded);
+
+						// Actualizar SOLO el ícono de la flecha
+						const arrow = button.querySelector('svg:last-child');
+						if (arrow) {
+							arrow.style.transform = isNowExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+							arrow.style.transition = 'transform 0.3s ease';
+						}
+					});
+				});
+			});
+
+			// Función para limpiar el estado (útil para debugging o reset)
+			function resetDropdownStates() {
+				const keys = Object.keys(localStorage);
+				keys.forEach(key => {
+					if (key.startsWith('dropdown_')) {
+						localStorage.removeItem(key);
+					}
+				});
+			}
 		</script>
 
 		<?php
@@ -343,8 +422,8 @@ class App {
 				</svg>
 			</button>
 			<ul id="dropdown_caja" class="hidden">
-                <hr>
-                <li>
+				<hr>
+				<li>
 					<a href="vista.php?ruta=caja_index"
 						class="sidebar-text flex items-center p-1 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 						sidebar-toggle-item><span
@@ -353,7 +432,7 @@ class App {
 					</a>
 				</li>
 				<li>
-					<a href="./e-commerce/products.html"
+					<a href="vista.php?ruta=caja_bobeda"
 						class="sidebar-text flex items-center p-1 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 						sidebar-toggle-item><span
 							class="transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
@@ -373,7 +452,7 @@ class App {
 						class="sidebar-text flex items-center p-1 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 						sidebar-toggle-item><span
 							class=" transition-opacity duration-300 whitespace-nowrap group-hover:opacity-100"
-							sidebar-toggle-item>- Pago de Préstamo Transferencia</span>
+							sidebar-toggle-item>- Pago por Transferencia</span>
 					</a>
 				</li>
 
@@ -422,7 +501,7 @@ class App {
 				</svg>
 			</button>
 			<ul id="dropdown_CajaGeneral" class="hidden">
-                <hr>
+				<hr>
 				<li>
 					<a href="./e-commerce/products.html"
 						class="sidebar-text flex items-center p-1 pl-4 text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -467,7 +546,7 @@ class App {
 				</svg>
 			</button>
 			<ul id="dropdown_Creditos" class="hidden">
-                <hr>
+				<hr>
 				<li>
 					<a href="./e-commerce/products.html"
 						class="sidebar-text flex items-center p-1 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -507,7 +586,7 @@ class App {
 				</svg>
 			</button>
 			<ul id="dropdown_Clientes" class="hidden">
-                <hr>
+				<hr>
 				<li>
 					<a href="./e-commerce/products.html"
 						class="sidebar-text flex items-center p-1 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -544,7 +623,7 @@ class App {
 				</svg>
 			</button>
 			<ul id="dropdown_Usuarios" class="hidden">
-                <hr>
+				<hr>
 				<li>
 					<a href="./e-commerce/products.html"
 						class="sidebar-text flex items-center p-1 pl-4  text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
